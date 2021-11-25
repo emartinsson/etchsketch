@@ -79,11 +79,9 @@ body{
 
 #gridOptions{
     margin-top: 0px;
+    margin-bottom: 10px;
 }
 
-#cleargridbutton{
-    margin-bottom: 40px;
-}
 
 .button{
     width: 100%;

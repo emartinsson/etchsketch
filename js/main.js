@@ -40,6 +40,7 @@ function buttonListeners(){
 }
 
 function eventSelection(e){
+    penActive = false;
     switch (e.target.id){
         case "blackButton":
             color="black";
@@ -57,7 +58,7 @@ function eventSelection(e){
             color="eraser"
             break;
     }
-    let penActive = false;
+    
 }
 
 
@@ -142,12 +143,12 @@ function eraser(){
 function updateSlider(){
     let slider = document.getElementById("gridSizeSlider");
     let output = document.getElementById("gridSizeSliderV");
-    output.innerHTML = `Grid-size: ${slider.value} x ${slider.value} `;
+    output.innerHTML = `Canvas size: ${slider.value} x ${slider.value} `;
     slider.addEventListener("change", () => {
         let value = slider.value;
         removeGrid();
         newGrid(value);
-        output.innerHTML = `Grid-size: ${value} x ${value} `;
+        output.innerHTML = `Canvas size: ${value} x ${value} `;
     })
     
     
